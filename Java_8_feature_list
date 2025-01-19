@@ -63,3 +63,4 @@ Stream API :-
       - anyMatch() - Checks if any elements of the stream matches given a predicate.
         Syntax :- 
           boolean anyMatch(Predicate<? super T> predicate)
+      - limit() :- Limits the number of elements.
