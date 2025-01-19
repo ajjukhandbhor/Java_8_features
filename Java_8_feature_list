@@ -5,18 +5,61 @@ Stream API :-
 - Stream API is used to process the collection of objects.
 - A stream in java is a sequence of objects that supports various methods that can be pipelined to produce the desired result.
 
-  Use of Stream in Java: 
+   Use of Stream in Java: 
     - Stream API is way to express and process the collection of objects.
     - Enable us to perform operations like filtering, mapping, reducing & sorting.
 
-  Features :- 
+   Features :- 
     - A Stream is not a data structure instead it takes input from the collection, Arrays or I/O channels.
     - A Stream is don't change the original data structure, they only provide the result as per the pipelined methods.
 
-  Different operations of Stream :- 
+   Different operations of Stream :- 
      1. Intermediate operations
      2. Terminal operations
 
-     Intermediate operations :-
+   Intermediate operations :-
+     Intermediate operations are the type of operations in which multiple methods are chained in a row. 
      
-     
+   characteristics of Intermediate operations :-
+     - methods are chained together.
+     - intermediate operations transform stream into another stream.
+
+   There are few intermediate operations mentioned below :-
+     - map() - Transform each element using a function & returns the stream.
+       Syntax :-
+        <R> Stream<R> map(Function<? super T, ? extends R> mapper)
+     - filter() - Filteres element based on a condition & returns the stream.
+       Syntax :- 
+         Stream<T> filter(Predicate<? super T> predicate)
+     - sorted() - sorts elements in natural or custom order & returns the stream.
+       syntax :-
+          Stream<T> sorted()
+          Stream<T> sorted(Comparator<? super T> comparator)
+     - distinct() - removes the duplicate elements. It returns a stream consisting of the distinct elements.
+   
+   Terminal operations :- 
+      Trigger the processing & returns a non-stream result.
+
+   There are few intermediate operations mentioned below :-
+      - forEach() - Iterates over the elements.
+        Syntax :- 
+          void forEach(Consumer<? super T> action)
+      - collect() - Gathers a list into a collection.
+        Syntax :-
+          <R, A> R collect(Collector<? super T, A, R> collector)
+      - reduce() - Reduces elements into a single value.
+        Syntax :-
+          T reduce(T identity, BinaryOperator<T> accumulator)
+          Optional<T> reduce(BinaryOperator<T> accumulator)
+      - count() - Returns the count of elements in the stream.
+        Syntax :- 
+          long count()
+      - findFirst() - Returns the first element of the stream, if present.
+        Syntax :-
+          Optional<T> findFirst() 
+      - allMatch() - Checks if all elements of the stream match a given predicate.
+        Syntax :-
+          boolean allMatch(Predicate<? super T> predicate)
+      - anyMatch() - Checks if any elements of the stream matches given a predicate.
+        Syntax :- 
+          boolean anyMatch(Predicate<? super T> predicate)
