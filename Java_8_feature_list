@@ -1,8 +1,7 @@
 Java 8 Features :-
 
 Stream API :- 
-- Stream API is a feature of Java, which is introduced in Java 8.
-- Stream API is used to process the collection of objects.
+- Stream API is a feature of Java, which is introduced in Java 8 to process the collection of objects.
 - A stream in java is a sequence of objects that supports various methods that can be pipelined to produce the desired result.
 
    Use of Stream in Java: 
