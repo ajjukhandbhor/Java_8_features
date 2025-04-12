@@ -1,6 +1,38 @@
 Java 8 Features :-
 
-Stream API :- 
+List of Features :-
+1.Functional Interface
+2.Lambda Expressions
+3.Stream API
+4.Default Methods
+5.Optional Class
+6.Date and Time API
+7.Nashorn Javascript Engine
+8.Concurrency Enhancements
+9.forEach() method
+10.Parallel Array Sorting
+11.Improved Annotations
+
+1) Functional Interfaces :-
+- Java 8 introduces several built in functional interfaces in java.util.function package to faciliate functional programming.
+  i) Supplier<T>
+ ii) Consumer<T>
+iii) Predicate<T>
+ iv) Function<T,R>
+  v) Unary Operator<T>
+ vi) Binary Operator<T>
+- Functional Interface is an interface with only single abstarct method.
+- we can create our own functional Interface.
+Note:
+When we creating our own functional interface we should use @FunctionalInterface annotation to mark it as functional interface. 
+Although it is not mandatory to use it, but it’s good to use it with functional interfaces to avoid addition of extra methods accidentally. 
+It will throw compile time error if we try to add more than one abstract method in a functional interface.
+
+- Along with the one abstract method, it can have any number of default and static methods. It can also have methods of object class.
+- A functional interface can extends another interface only when it does not have any abstract method.
+
+
+3) Stream API :- 
 - Stream API is a feature of Java, which is introduced in Java 8 to process the collection of objects.
 - A stream in java is a sequence of objects that supports various methods that can be pipelined to produce the desired result.
 
