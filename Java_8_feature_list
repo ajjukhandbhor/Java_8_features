@@ -37,6 +37,22 @@ It will throw compile time error if we try to add more than one abstract method 
 - Along with the one abstract method, it can have any number of default and static methods. It can also have methods of object class.
 - A functional interface can extends another interface only when it does not have any abstract method.
 
+2) Lambda Expression :-
+- Lambda expression is a way to visualize the functional programming in the java object oriented world.
+- In java, lambda expressions are similar to functional programming, but not 100%.
+- Lambda expression applicable only on functional interface.
+- Java Lambda Expression Syntax :-
+  (argument-list) -> {function-body}  
+  
+  Where:
+  Argument-list: It can be empty or non-empty as well.
+  Arrow notation/lambda notation: It is used to link arguments-list and body of expression.
+  Function-body: It contains expressions and statements for lambda expression.
+- Lambda expression advantage :-
+  i) It reduce lines of code.
+ ii) It provides sequential and parallel execution support.
+iii) It provides a way to pass behaviors into methods.
+
 3) Stream API :- 
 - Stream API is a feature of Java, which is introduced in Java 8 to process the collection of objects.
 - A stream in java is a sequence of objects that supports various methods that can be pipelined to produce the desired result.
@@ -100,3 +116,28 @@ It will throw compile time error if we try to add more than one abstract method 
         Syntax :- 
           boolean anyMatch(Predicate<? super T> predicate)
       - limit() :- Limits the number of elements.
+
+4) Default Methods :- 
+- Java default methods are defined inside the interface and tagged with default keyword. 
+  Default methods are non-abstract methods. We can override default methods to provide more specific implementation.
+
+Why default method?
+- For example we have an interface which has multiple methods, 
+and multiple classes are implementing this interface. One of the method implementation can be common across the class. 
+We can make that method as a default method, so that the implementation is common for all classes.
+
+- Second scenario where we have already existing application, for a new requirements we have to add a method to the existing interface.
+If we add new method then we need to implement it throughout the implementation classes. By using the Java 8 default method we can add a default 
+implementation of that method which resolves the problem.
+
+5) Optional class :- 
+- Java 8 introduced a new public final class Optional in java.util package.
+- Optional class in java 8, aimed to provide a cleaner and safer way to handle null values.
+- The Optional class is a container object that may or may not contain null values.
+- It helps to prevent NullPointerExceptions by indicating the prescence or abscence of a value explicitly.
+
+Commonly used methods of Java Optional class :-
+- Optional.ofNullable(): It returns a Non-empty Optional if the given object has a value, otherwise it returns an empty Optional.
+- isPresent(): It is used check whether the particular Optional object is empty or not-empty.
+- ifPresent(): It only executes if the given Optional object is non-empty.
+
