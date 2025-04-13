@@ -141,3 +141,10 @@ Commonly used methods of Java Optional class :-
 - isPresent(): It is used check whether the particular Optional object is empty or not-empty.
 - ifPresent(): It only executes if the given Optional object is non-empty.
 
+6) Date and Time API :-
+- Java 8 introduced a new Date and Time API in the java.time package to address the shortcomings and complexities of the old java.util.Date and 
+  java.util.Calendar classes.
+- The new api provides more comprehensive, immutable and thread safe to work with date and times.
+
+
+
